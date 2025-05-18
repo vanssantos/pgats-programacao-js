@@ -39,7 +39,7 @@ function calcularQtdeConsumoDeRacao(nome, peso, estoqueAtualGrama) {
 
 
 calcularQtdeConsumoDeRacao('Ada',1,2000)
-calcularQtdeConsumoDeRacao('Au Au',15.5,15000)
+calcularQtdeConsumoDeRacao('Au Au',15.5,15000) 
 
 
 
