@@ -13,8 +13,6 @@ function verificarSePodeSerAdotado(idade, porte) {
     return adocao
 }
 
-
-
 function calcularConsumoDeRacao(nome, idade, peso) {
 
     const qtdeRacaoDia = peso * 300

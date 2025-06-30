@@ -1,6 +1,6 @@
 # CI de Nível 01- Disparo manual a partir de um clique
 
-# Nom do nosso 'pipeline'
+# Nome da 'pipeline'
 name: 'Execução Manual'
 
 # Começar a configurar as regras de pipeline
