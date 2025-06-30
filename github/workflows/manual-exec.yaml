@@ -1,0 +1,35 @@
+# CI de Nível 01- Disparo manual a partir de um clique
+
+# Nom do nosso 'pipeline'
+name: 'Execução Manual'
+
+# Começar a configurar as regras de pipeline
+# regras de disparo (gatilhos/triggers)
+# gatilho de execução manual = workflow_dispatch
+
+on:
+  workflow_dispatch:
+
+# configura as tarefas/trabalhos dentro do pipeline = jobs
+jobs:
+  e2e-tests:
+    #máquina que o job vai executar
+    runs-on: ubuntu-20.04
+
+    #steps - passos do script de build
+    steps:
+      # clone do projeto
+      - uses: actions/checkout@v4
+
+      # instalação do node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      # instalação de dependências
+      - name: Instalando dependências
+        run: npm install
+      
+      # Executar os testes e2e
+      - name: Executando testes E2E
+        run: npx mocha testes/trabalho-final.js
