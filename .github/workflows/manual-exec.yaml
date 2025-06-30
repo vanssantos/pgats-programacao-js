@@ -38,6 +38,7 @@ jobs:
       # Salvar relatório
       - name: Salvar relatório
         uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
         with:
             name: mochawesome-report
             path: mochawesome-report/
