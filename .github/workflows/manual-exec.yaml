@@ -32,4 +32,12 @@ jobs:
       
       # Executar os testes e2e
       - name: Executando testes E2E
-        run: npx mocha testes/trabalho-final.js
+        run: npx mocha testes/trabalho-final.js --reporter mochawesome
+
+
+      # Salvar relatório
+      - name: Salvar relatório
+        uses: actions/upload-artifact@v4
+        with:
+            name: mochawesome-report
+            path: mochawesome-report/
